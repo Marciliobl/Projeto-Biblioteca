@@ -1,27 +1,39 @@
 class Locadora {
-    constructor() {
-        this.filmes = [];
-    }
+  constructor() {
+    this.filmes = [];
+  }
 
-    adicionarFilme(filme) {
-        this.filmes.push(filme);
-        console.log(`🎬 Filme "${filme.titulo}" adicionado à locadora.`);
-    }
+  adicionarFilme(filme) {
+    this.filmes.push(filme);
+  }
 
-    listarFilmes() {
-        console.log("🎥 Lista de filmes na locadora:");
-        if (this.filmes.length === 0) {
-            console.log("Nenhum filme cadastrado.");
-        } else {
-            this.filmes.forEach(f => {
-                console.log(`- ${f.titulo} (${f.emprestado ? "Emprestado" : "Disponível"})`);
-            });
-        }
+  listarFilmes() {
+    console.log("🎬 Lista de Filmes:");
+    if (this.filmes.length === 0) {
+      console.log("Nenhum filme cadastrado.");
+    } else {
+      this.filmes.forEach((filme) =>
+        console.log(
+          `- ${filme.titulo} | Diretor: ${filme.diretor} | ${
+            filme.emprestado ? "❌ Emprestado" : "✅ Disponível"
+          }`
+        )
+      );
     }
+  }
 
-    buscarFilme(titulo) {
-        return this.filmes.find(f => f.titulo.toLowerCase() === titulo.toLowerCase());
-    }
+  buscarFilme(tituloNormalizado) {
+    return this.filmes.find(
+      (filme) => this.normalizar(filme.titulo) === tituloNormalizado
+    );
+  }
+
+  normalizar(texto) {
+    return texto
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  }
 }
 
 module.exports = Locadora;

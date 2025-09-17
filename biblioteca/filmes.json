@@ -1,0 +1,22 @@
+[
+  {
+    "titulo": "Harry Potter e a Câmara Secreta",
+    "diretor": "Peter Honess",
+    "emprestado": false
+  },
+  {
+    "titulo": "Harry Potter e a Pedra Filosofal",
+    "diretor": "Peter Honess",
+    "emprestado": false
+  },
+  {
+    "titulo": "Harry Potter e o Cálice de Fogo",
+    "diretor": "Peter Honess",
+    "emprestado": false
+  },
+  {
+    "titulo": "0",
+    "diretor": "0",
+    "emprestado": false
+  }
+]

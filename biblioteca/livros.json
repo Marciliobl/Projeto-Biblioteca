@@ -1,0 +1,22 @@
+[
+  {
+    "titulo": "A Guerra da Papoula",
+    "autor": "J.k. Kuang",
+    "emprestado": true
+  },
+  {
+    "titulo": "Harry Potter e a Câmara Secreta",
+    "autor": "J. K. Rowling",
+    "emprestado": false
+  },
+  {
+    "titulo": "Harry Potter e a Pedra Filosofal",
+    "autor": "J. K. Rowling",
+    "emprestado": false
+  },
+  {
+    "titulo": "0",
+    "autor": "0",
+    "emprestado": false
+  }
+]
